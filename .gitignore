@@ -1,0 +1,14 @@
+.idea/
+.gradle/
+out/
+build/
+gradle/
+*.ipr
+*.iws
+**/*.iml
+**/package-lock.json
+**/dist/
+**/node_modules/
+**/.awcache
+gradlew.bat
+gradlew
