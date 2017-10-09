@@ -12,7 +12,7 @@ buildscript {
 }
 
 plugins {
-    val kotlinVersion = "1.1.50"
+    val kotlinVersion = "1.1.51"
 
     base
     // 'kotlin.jvm' plugin should present in each build.gradle.kts file to help them to compile.

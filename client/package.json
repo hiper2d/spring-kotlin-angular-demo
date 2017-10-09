@@ -53,7 +53,7 @@
     "webpack-merge": "^4.1.0"
   },
   "scripts": {
-    "serve": "webpack-dev-server --profile --watch --progress",
+    "start": "webpack-dev-server --profile --watch --progress",
     "hmr": "webpack-dev-server --profile --watch --progress",
     "prod": "npm run aot",
     "prodServer": "webpack-dev-server --config config/webpack.prod.js --open",

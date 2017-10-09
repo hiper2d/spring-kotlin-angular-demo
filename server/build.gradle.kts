@@ -14,8 +14,9 @@ apply {
 
 dependencies {
     compile ("org.jetbrains.kotlin:kotlin-stdlib-jre8")
+    // compile ("org.jetbrains.kotlinx:kotlinx-coroutines-core:0.19.1") // todo: deal with it later
     compile ("org.jetbrains.kotlin:kotlin-reflect")
-    compile ("org.springframework.boot:spring-boot-starter")
+    compile ("org.springframework.boot:spring-boot-starter-webflux")
 }
 
 tasks {

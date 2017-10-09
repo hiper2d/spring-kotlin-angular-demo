@@ -1,0 +1,10 @@
+logging:
+  level:
+    root: info
+
+server:
+  port: ${PORT:8082}
+
+spring:
+  application:
+    name: server

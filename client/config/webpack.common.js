@@ -11,7 +11,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const NoEmitOnErrorsPlugin = require('webpack/lib/NoEmitOnErrorsPlugin');
 
 const ENV = process.env.npm_lifecycle_event ? process.env.npm_lifecycle_event : '';
-const isStatic = ENV === 'serve';
+const isStatic = ENV === 'start';
 const isHmr = ENV === 'hmr';
 const isProd = ENV === 'prod';
 const isTest = ENV === 'test';
