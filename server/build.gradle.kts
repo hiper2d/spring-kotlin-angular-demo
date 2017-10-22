@@ -1,9 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-plugins {
-    application
-}
-
 apply {
     plugin("org.jetbrains.kotlin.jvm")
     plugin("org.jetbrains.kotlin.plugin.spring")
@@ -14,7 +10,6 @@ apply {
 
 dependencies {
     compile ("org.jetbrains.kotlin:kotlin-stdlib-jre8")
-    // compile ("org.jetbrains.kotlinx:kotlinx-coroutines-core:0.19.1") // todo: deal with it later
     compile ("org.jetbrains.kotlin:kotlin-reflect")
     compile ("org.springframework.boot:spring-boot-starter-webflux")
 }
@@ -26,9 +21,5 @@ tasks {
             freeCompilerArgs = listOf("-Xjsr305=strict")
         }
     }
-}
-
-application {
-    mainClassName = "com.hiper2d.ApplicationKt"
 }
 
