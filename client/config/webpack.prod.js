@@ -54,7 +54,9 @@ if (isProdServer) {
         }
     };
 
-    commonConfig.plugins = [];
+    commonConfig.plugins = [
+        new ExtractTextPlugin('[name].[hash].css')
+    ];
 }
 
 if (isAot) {

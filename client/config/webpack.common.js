@@ -109,14 +109,7 @@ if (!isTest) {
             template: 'src/index.html',
             favicon: 'src/assets/favicon.ico'
         }),
-        new ExtractTextPlugin('[name].[hash].css'),
-        // Workaround for angular/angular#11580
-        new ContextReplacementPlugin(
-            // The (\\|\/) piece accounts for path separators in *nix and Windows
-            /angular(\\|\/)core(\\|\/)@angular/,
-            helpers.root('src'), // location of your src
-            {} // a map of your routes
-        )
+        new ExtractTextPlugin('[name].[hash].css')
     ].concat(isHmr ? new HotModuleReplacementPlugin() : []);
 }
 
