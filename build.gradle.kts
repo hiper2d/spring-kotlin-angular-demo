@@ -2,6 +2,7 @@ buildscript {
     val springBootVersion = "2.0.0.M4"
 
     repositories {
+        jcenter()
         maven { setUrl("https://repo.spring.io/milestone") }
     }
     dependencies {
@@ -13,16 +14,16 @@ buildscript {
 plugins {
     val kotlinVersion = "1.1.51"
     val nodePluginVersion = "1.2.0"
+    val dockerPluginVersion = "0.13.0"
 
     base
-    // 'kotlin.jvm' plugin should present in each build.gradle.kts file to help them to compile.
     id ("org.jetbrains.kotlin.jvm") version kotlinVersion
+    id ("com.palantir.docker") version dockerPluginVersion apply false
+    id ("com.moowork.node") version nodePluginVersion apply false
 
     // This two plugins helps to use Spring and Jps annotations/entities with Kotlin without magic.
     id ("org.jetbrains.kotlin.plugin.spring") version kotlinVersion apply false
     id ("org.jetbrains.kotlin.plugin.jpa") version kotlinVersion apply false
-
-    id ("com.moowork.node") version nodePluginVersion apply false
 }
 
 subprojects {

@@ -1,27 +1,9 @@
-### ---------------------------------------------------------- ###
-### ------------------- STAGE 1: Build ### ------------------- ###
-### ---------------------------------------------------------- ###
-
-FROM node:alpine as builder
-COPY package.json .
-RUN npm set progress=false && npm config set depth 0 && npm cache clean --force
-
-## Storing node modules on a separate Docker layer will prevent unnecessary npm installs at each build
-RUN npm i && mkdir /angular-client && cp -R ./node_modules ./angular-client
-
-WORKDIR /angular-client
-COPY . .
-RUN npm run prod
-
-### ---------------------------------------------------------- ###
-### ------------------- STAGE 2: Setup ### ------------------- ###
-### ---------------------------------------------------------- ###
-
 FROM nginx:alpine
+LABEL maintainer="hiper2d"
 COPY config/nginx/default.conf /etc/nginx/conf.d/
 
 ## Remove default nginx website
 RUN rm -rf /usr/share/nginx/html/*
 
-COPY --from=builder /angular-client/dist /usr/share/nginx/html
+COPY dist /usr/share/nginx/html
 CMD ["nginx", "-g", "daemon off;"]

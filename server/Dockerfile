@@ -1,7 +1,14 @@
 FROM openjdk:9-jre-slim
 LABEL maintainer="hiper2d"
+
+ARG JAR_NAME
+ARG JAVA_OPTS
+ARG PORT
+
 VOLUME /tmp
-ADD build/libs/server-0.1.0-SNAPSHOT.jar server.jar
-ENV JAVA_OPTS=""
-EXPOSE 8082
+
+ADD $JAR_NAME server.jar
+ENV JAVA_OPTS=$JAVA_OPTS
+EXPOSE $PORT
+
 ENTRYPOINT exec java $JAVA_OPTS -jar /server.jar
