@@ -13,6 +13,7 @@ tasks {
     }
     "npmProdBuild"(type = NpmTask::class) {
         setArgs(listOf("run", "prod"))
+        dependsOn(tasks.findByName("npm_install"))
     }
     "copyNginxConfigToDockerBuild"(type = Copy::class) {
         from("config/nginx")
