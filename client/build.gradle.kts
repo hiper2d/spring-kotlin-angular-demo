@@ -17,12 +17,10 @@ tasks {
     "copyNginxConfigToDockerBuild"(type = Copy::class) {
         from("config/nginx")
         into("build/docker/config/nginx")
-        dependsOn(tasks.findByName("dockerPrepare"))
     }
     "copyDistToDockerBuild"(type = Copy::class) {
         from("dist")
         into("build/docker/dist")
-        dependsOn(tasks.findByName("dockerPrepare"))
     }
 }
 
@@ -37,4 +35,4 @@ configure<DockerExtension> {
     pull(true)
 }
 
-tasks.findByName("docker")?.dependsOn("copyDistToDockerBuild", "copyNginxConfigToDockerBuild")
+tasks.findByName("dockerPrepare")?.finalizedBy("copyDistToDockerBuild", "copyNginxConfigToDockerBuild")
