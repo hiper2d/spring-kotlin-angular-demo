@@ -5,7 +5,7 @@ Spring 5 Kotlin Angular demo
 
 This project is designed to demonstrate new `Spring 5 WebFlux Framework` with Kotlin and Angular 4.
 
-##### Technology stack
+### Technology stack
 * Spring Framework 5
 * Spring Boot 2.0.0
 * Spring WebFlux
@@ -40,7 +40,6 @@ gradle client:npmProdBuild
 ### Run
 ##### Manual
 Start [server](./server/):
-> use `./gradlew` instead of `gradle` if you didn't installed `gradle`
 ```bash
 # as Java appliasion
 gradle server:bootRun
@@ -48,12 +47,10 @@ gradle server:bootRun
 gradle server:docker
 ```
 Start [client](./client/) in development mode using webpack-dev-server
-> use `./gradlew` instead of `gradle` if you didn't installed `gradle`
 ```bash
 gradle client:npmStart
 ```
 Start [client](./client/) in production mode using Nginx inside Docker container
-> use `./gradlew` instead of `gradle` if you didn't installed `gradle`
 ```bash
 gradle client:docker
 ```
