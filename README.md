@@ -2,10 +2,11 @@ Spring 5 Kotlin Angular demo
 =============
 
 [![TravisCI Build](https://travis-ci.org/hiper2d/spring-kotlin-angular-demo.svg)](https://travis-ci.org/hiper2d/spring-kotlin-angular-demo)
+[![David Build](https://david-dm.org/hiper2d/spring-kotlin-angular-demo.svg)](https://david-dm.org/hiper2d/spring-kotlin-angular-demo)
 
 This project is designed to demonstrate new `Spring 5 WebFlux Framework` with Kotlin and Angular 4.
 
-### Technology stack
+##### Technology stack
 * Spring Framework 5
 * Spring Boot 2.0.0
 * Spring WebFlux
@@ -14,7 +15,7 @@ This project is designed to demonstrate new `Spring 5 WebFlux Framework` with Ko
 * Angular 4
 * Webpack 3
 
-### Prerequisites
+##### Prerequisites
 1. Gradle 4
 2. Docker
 3. Node + npm
