@@ -36,9 +36,7 @@ gradle server:build
 # install Angular client dependencies and run AoT compilation
 gradle client:npmProdBuild
 ```
-
 ### Run
-##### Manual
 Start [server](./server/):
 ```bash
 # as Java appliasion
