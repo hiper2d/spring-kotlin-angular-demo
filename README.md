@@ -45,9 +45,9 @@ gradle client:npmProdBuild
 
 Start [server](./server/)
 ```bash
-# as Java appliasion
+# as a Java application
 gradle server:bootRun
-# as Docker image
+# as a Docker image
 gradle server:docker
 ```
 Start [client](./client/) in development mode using webpack-dev-server
