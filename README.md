@@ -42,7 +42,8 @@ gradle client:npmProdBuild
 ```
 ### Run
 > use `./gradlew` instead of `gradle` if you didn't installed `gradle`
-Start [server](./server/):
+
+Start [server](./server/)
 ```bash
 # as Java appliasion
 gradle server:bootRun
