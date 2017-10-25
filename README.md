@@ -34,7 +34,6 @@ gradle server:build
 gradle client:npm_install
 ```
 ##### Production mode
-Includes Angular AoT compilation
 ```bash
 # build Spring Boot server application
 gradle server:build
@@ -42,6 +41,7 @@ gradle server:build
 gradle client:npmProdBuild
 ```
 ### Run
+> use `./gradlew` instead of `gradle` if you didn't installed `gradle`
 Start [server](./server/):
 ```bash
 # as Java appliasion
