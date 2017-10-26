@@ -21,7 +21,7 @@ plugins {
     id ("com.palantir.docker") version dockerPluginVersion apply false
     id ("com.moowork.node") version nodePluginVersion apply false
 
-    // This two plugins helps to use Spring and Jps annotations/entities with Kotlin without magic.
+    // This two plugins helps to use Spring and JPA annotations/entities with Kotlin without magic.
     id ("org.jetbrains.kotlin.plugin.spring") version kotlinVersion apply false
     id ("org.jetbrains.kotlin.plugin.jpa") version kotlinVersion apply false
 }
