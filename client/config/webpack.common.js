@@ -80,7 +80,6 @@ config.module = {
             test: /\.css$/, // loading global styles
             include: helpers.root('src', 'assets'),
             loader: ExtractTextPlugin.extract({
-                fallback: 'style-loader',
                 use: [
                     {loader: "css-to-string-loader"},
                     {loader: "css-loader"},

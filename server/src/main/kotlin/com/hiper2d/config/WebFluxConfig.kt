@@ -10,7 +10,6 @@ import org.springframework.web.reactive.config.WebFluxConfigurer
 import org.springframework.web.reactive.function.server.router
 
 @Configuration
-@EnableWebFlux
 class WebFluxConfig: WebFluxConfigurer {
 
     override fun addCorsMappings(registry: CorsRegistry) {
